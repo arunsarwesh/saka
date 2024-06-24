@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for You!</title>
+    <style>
+        body {
+            font-family: 'TypoUpright BT';
+            font-size: 20px;
+            background: linear-gradient(#a50bd0,rgba(0, 0, 0, 0.1));
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #7d089d;
+        }
+
+        .heart {
+            width: 100px;
+            height: 100px;
+            background-color: #a50bd0;
+            position: relative;
+            margin: 50px auto;
+            transform: rotate(-45deg);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 100px;
+            height: 100px;
+            background-color: #a50bd0;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+
+        button {
+            background-color: #7d089d;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-family: 'Monotype Corsiva';
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background: linear-gradient(#a50bd0,rgba(0, 0, 0, 1));
+        }
+
+        .hidden {
+            display: none;
+        }
+        #surpriseMessage{
+            border: 1px #7d089d solid;
+            margin: 2px 30%;
+            box-shadow: 0px 2px 0 5px rgba(208, 0, 255, 0.59);
+        }
+        #Oye{
+            font-family: Harlow;
+            font-weight: bold;
+            font-size: larger;
+        }
+        span{
+            font-family: Algerian;
+            font-weight: bold;
+        }
+        #Fisp{
+            font-family: Magneto;
+            font-size: 20px;
+        }
+        #secp{
+            font-family: 'Viner Hand ITC';
+            font-size: 20px;
+            font-weight: bold;
+            color: #9000ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Surprise!</h1>
+        <p id="Oye">Oye <span>Sarika</span>,</p>
+        <p id="Fisp">You came into my life unexpectedly and brought so much joy and happiness. I'm so grateful to have you as my best friend!</p>
+        <div class="heart"></div>
+        <p id="secp">Here's to many more adventures together!</p>
+        <button onclick="revealMessage()">Click me for a surprise!</button>
+        <div id="surpriseMessage" class="hidden">
+            <p>You are amazing! 😊<br>You are the Only person 🙎‍♀️ who becomes Favorite to Me 💕:)</p>
+        </div>
+    </div>
+    <script>
+        function revealMessage() {
+            document.getElementById('surpriseMessage').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
